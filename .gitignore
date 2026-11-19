@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+# salidas y caché de trabajo
+clips/
+.viralclips_cache/
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.wav
+.env
