@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "viralclips"
+version = "0.1.0"
+description = "Convierte videos largos en clips verticales con puntaje de viralidad."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=2.0",
+    "pydantic>=2.6",
+    "yt-dlp>=2025.1.1",
+    "faster-whisper>=1.0",
+    "opencv-python-headless>=4.8,<5",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+viralclips = "viralclips.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["viralclips*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
